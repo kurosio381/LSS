@@ -1,0 +1,17 @@
+name: Kurosio_log_search_system
+version: '1.0'  # 1.00 を固定のバージョン番号にすることをおすすめします
+main: lls.kurosio_log_search_system.Kurosio_log_search_system
+api-version: '1.15'
+commands:
+  lss:
+    description: ログ検索システムを実行します
+    usage: /lss p:<期間> lm:<ログ番号> u:<ユーザー> pl:<プラグイン> d:<表示方法> f:<ファイル保存オプション>
+    aliases:
+      - lss_search
+    permission: kurosio.logsearch
+    permission-message: "ログ検索を実行する権限がありません。"
+
+permissions:
+  kurosio.logsearch:
+    description: ログ検索を実行する権限
+    default: op  # 権限が必要な場合はopのみ、または適切な権限設定をしてください
